@@ -1,0 +1,7 @@
+<h1>Menus#items</h1>
+<p>Find me in app/views/menus/items.html.erb</p>
+<%= content_for :javascript do -%>
+	<%= javascript_tag do %>
+		MenuApp.initialize({ menus: <%== @menus.to_json %>});
+	<% end %>
+<% end -%>

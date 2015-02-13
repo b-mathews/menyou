@@ -1,3 +1,15 @@
+var MenuApp = {
+	Models: {};
+	Collections: {};
+	Views: {};
+	Routers: {};
+	initialize: function(){
+		var menus = new MenuApp.Collections.Menus(data.menus);
+		new MenuApp.Routers.Tasks({ menus: menus});
+		Backbone.history.start();
+	}
+};
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -14,3 +26,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
